@@ -2154,7 +2154,7 @@ input[type="radio"] + label:before {
 .image span {
 	color: white;
 	padding: 0.5rem;
-	font-size: 10px;
+	font-size: 7.5px;
 	position: relative;
 	z-index: 1;
 }
