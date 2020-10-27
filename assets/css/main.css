@@ -1804,7 +1804,7 @@ pre code {
 /* Container */
 
 .container {
-	margin: 1em auto;
+	margin: 0.5em auto;
 	max-width: calc(100% - 4.5em);
 	width: 45em;
 	color: darkslategray;
@@ -2851,7 +2851,7 @@ input[type="button"]:disabled,
 	-webkit-flex-shrink: 0;
 	-ms-flex-shrink: 0;
 	flex-shrink: 0;
-	padding: 3em;
+	padding: 1.5em;
 }
 
 #header > header .avatar {
@@ -2922,7 +2922,7 @@ input[type="button"]:disabled,
 }
 
 #header > nav ul li a.active {
-	background: #fff;
+	background: rgb(212, 212, 212);
 	color: #4acaa8 !important;
 }
 
@@ -2944,7 +2944,7 @@ input[type="button"]:disabled,
 }
 
 #main > section > .container {
-	padding: 6em 0 4em 0;
+	padding: 3em 0;
 }
 
 #main > section:first-child {
