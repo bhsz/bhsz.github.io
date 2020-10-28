@@ -2851,7 +2851,7 @@ input[type="button"]:disabled,
 	-webkit-flex-shrink: 0;
 	-ms-flex-shrink: 0;
 	flex-shrink: 0;
-	padding: 1.5em;
+	padding: 1em;
 }
 
 #header > header .avatar {
@@ -2917,7 +2917,7 @@ input[type="button"]:disabled,
 	border: 0;
 	color: #ffffff !important;
 	display: block;
-	padding: 0.85em 0;
+	padding: 0.25em 0;
 	text-decoration: none;
 }
 
