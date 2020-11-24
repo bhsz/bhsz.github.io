@@ -2618,8 +2618,7 @@ input[type="button"],
 	-ms-appearance: none;
 	appearance: none;
 	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	-webkit-transition: background-color 0.2s ease-in-out,
-		color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	background-color: #989898;
@@ -3283,7 +3282,7 @@ input[type="button"]:disabled,
 	}
 
 	header.major h2 {
-		font-size: 2em;
+		font-size: 1.9em;
 	}
 
 	header.major h2 + p {
@@ -3445,4 +3444,15 @@ input[type="button"]:disabled,
 	.button {
 		padding: 0;
 	}
+}
+
+/* Custom */
+.curly-brace {
+	color: rgb(0, 125, 255);
+}
+
+.my-cv {
+	margin: 10px 0;
+	border-radius: 15px;
+	background-color: rgb(0, 200, 255);
 }
