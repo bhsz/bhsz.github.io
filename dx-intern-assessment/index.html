@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Engineering Internship Assessment</title>
+		<meta name="description" content="The HTML5 Herald" />
+		<meta name="author" content="Digi-X Internship Committee" />
+
+		<link rel="stylesheet" href="style.css?v=1.0" />
+		<link rel="stylesheet" href="custom.css?v=1.0" />
+
+		<!-- zip.js by https://github.com/gildas-lormeau/zip.js -->
+		<script type="text/javascript" src="zip-full.min.js"></script>
+	</head>
+
+	<body>
+		<div class="top-wrapper">
+			<img
+				src="https://assets.website-files.com/5cd4f29af95bc7d8af794e0e/5cfe060171000aa66754447a_n-digi-x-logo-white-yellow-standard.svg"
+				alt="digi-x logo"
+				height="70"
+			/>
+			<h1>Engineering Internship Assessment</h1>
+		</div>
+
+		<div class="instruction-wrapper">
+			<h2>What you need to do?</h2>
+			<h3 style="margin-top: 31px">Using this HTML template, create a page that can:</h3>
+			<ol>
+				<li><b class="yellow">Upload</b> a zip file - containing 5 images (Cats, or Dogs, or even Pokemons)</li>
+				<li>after uploading, <b class="yellow">Extract</b> the zip to get the images</li>
+				<li><b class="yellow">Display</b> the images on this page</li>
+			</ol>
+
+			<h2 style="margin-top: 51px">The rules?</h2>
+			<ol>
+				<li>May use <b class="yellow">any programming language/script</b>. The simplest the better *wink*</li>
+				<li><b class="yellow">Best if this project could be hosted</b></li>
+				<li>
+					<b class="yellow">If you are not hosting</b>, please provide a video as proof (GDrive video link is
+					ok)
+				</li>
+				<li>
+					<b class="yellow">Submit your code</b> by pushing to your own github account, and share the link
+					with us
+				</li>
+			</ol>
+		</div>
+
+		<!-- Accept only sets correct format for browsing, user can still upload whatever they wish -->
+		<input id="zip-upload" type="file" accept="application/zip" />
+
+		<!-- DO NO REMOVE CODE STARTING HERE -->
+		<div class="display-wrapper">
+			<h2 style="margin-top: 51px">My images</h2>
+			<div class="append-images-here">
+				<p>No image found. Your extracted images should be here.</p>
+				<!-- THE IMAGES SHOULD BE DISPLAYED INSIDE HERE -->
+			</div>
+		</div>
+		<!-- DO NO REMOVE CODE UNTIL HERE -->
+	</body>
+
+	<script>
+		const zipUpload = document.getElementById("zip-upload");
+		zipUpload.onchange = async () => {
+			const file = zipUpload.files[0];
+
+			//Check if uploaded file is a zip
+			if (file.type !== "application/zip") {
+				zipUpload.value = "";
+				return alert("Please upload a ZIP");
+			}
+
+			//Read file and await decompression
+			const reader = new zip.ZipReader(new zip.BlobReader(file));
+			const entries = await reader.getEntries();
+
+			//Remove content from display div
+			const display = document.getElementsByClassName("append-images-here")[0];
+			while (display.firstChild) {
+				display.removeChild(display.firstChild);
+			}
+
+			var notAnImageErr = false;
+			for (var i in entries) {
+				//Assume well-formed filename with jpeg, jpg or png as extension
+				var ext = entries[i].filename.split(".")[1];
+				switch (ext) {
+					case "jpeg":
+					case "jpg":
+						ext = "jpeg";
+						break;
+					case "png":
+						ext = "png";
+						break;
+					default:
+						notAnImageErr = true;
+						continue; //Do not attempt to display non image
+				}
+
+				//Read data from entry
+				const data = await entries[i].getData(new zip.Data64URIWriter([`image/${ext}`]));
+				//Construct img element
+				const img = document.createElement("img");
+				img.classList.add("image-from-zip");
+				img.src = data;
+				//Display img
+				display.appendChild(img);
+			}
+
+			//If one or more files not an image, alert user
+			if (notAnImageErr) {
+				alert("ZIP should only contain images.");
+			}
+		};
+	</script>
+</html>
