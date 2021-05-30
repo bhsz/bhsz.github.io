@@ -10,16 +10,6 @@ body {
 	font-size: 1.6rem;
 }
 
-.tab {
-	text-decoration: none;
-	color: rgb(0, 32, 100);
-}
-
-.tab:hover {
-	text-decoration: none;
-	color: rgb(216, 140, 0);
-}
-
 .grid-container {
 	display: grid;
 	grid-template-areas: "header" "main";
@@ -37,7 +27,6 @@ body {
 }
 
 #header {
-	grid-area: header;
 	width: 100%;
 	display: flex;
 	font-size: 2rem;
@@ -54,7 +43,7 @@ body {
 
 #main {
 	grid-area: main;
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(240, 240, 240);
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1080px;
@@ -68,10 +57,6 @@ body {
 	background-color: rgb(180, 255, 109);
 }
 
-#cv:hover {
-	color: black;
-}
-
 .scroll-below-header {
 	scroll-margin-top: 8rem;
 	border-bottom: 0.1px solid gray;
@@ -79,14 +64,6 @@ body {
 
 .intro {
 	font-size: 20px;
-}
-
-.languages {
-	line-height: 30px;
-}
-
-#experience li:not(:last-child) {
-	margin-bottom: 10px;
 }
 
 article {
@@ -105,85 +82,4 @@ article p {
 #contact-links li {
 	font-size: 20px;
 	margin: 5px;
-}
-
-/* Menu */
-
-#menu-icon {
-	display: hidden;
-	width: 4rem;
-	height: 4rem;
-	background: transparent url(Images/menu.jpg);
-	background-size: cover;
-}
-
-a:hover#menu-icon {
-	border-radius: 4px 4px 0 0;
-}
-
-nav {
-	position: absolute;
-	right: 20px;
-}
-
-#links {
-	margin-top: 1.6rem;
-	margin-bottom: 0;
-	list-style: none;
-}
-
-#links li {
-	float: left;
-	padding: 10px;
-}
-
-/*MEDIA QUERY*/
-@media only screen and (max-width: 920px) {
-	header {
-		position: absolute;
-	}
-
-	#menu-icon {
-		display: inline-block;
-		position: absolute;
-		right: 2rem;
-		top: 1.75rem;
-	}
-
-	#links {
-		margin: 0;
-		list-style: none;
-	}
-
-	#links li {
-		padding: 5px 0;
-	}
-
-	nav {
-		position: unset;
-	}
-
-	nav ul,
-	nav:active ul {
-		display: none;
-		position: absolute;
-		padding-left: 0;
-		background: white;
-		border: 2px solid #444;
-		right: 10px;
-		top: 60px;
-		width: 45%;
-		border-radius: 4px 0 4px 4px;
-	}
-
-	nav li {
-		text-align: center;
-		width: 100%;
-		padding: 10px 0;
-		margin: 0;
-	}
-
-	nav li:not(:last-child) {
-		border-bottom: 0.1px gray solid;
-	}
 }
