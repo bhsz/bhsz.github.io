@@ -4,46 +4,70 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="favicon.png" type="image/png" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+		<link rel="stylesheet" href="style.css" />
 		<title>Brandon Ho</title>
 	</head>
 	<body>
-		<div class="grid-container">
-			<header id="header">
-				<img id="logo" src="Images/avatar.png" />
-				<h4>{ <span class="blue">Brandon Ho</span> }</h4>
-			</header>
-			<main id="main">
-				<div id="about" class="scroll-below-header">
-					<h1 class="blue underline">About</h1>
-					<p class="intro">Born and raised in Sabah, Malaysia.</p>
-					<p class="intro">Second year undergraduate pursuing MEng Computing @ Imperial College London.</p>
-					<p class="intro">Huge fan of Chelsea FC, Blackpink and Elon Musk.</p>
-				</div>
-				<div id="projects" class="scroll-below-header">
-					<h1 class="blue underline">Projects</h1>
-					<article>
-						<a href="https://www.eklan.my" target="_blank"><h3>eklan.my</h3></a>
-						<p>
-							Developed an online directory for home businesses in Kota Kinabalu to support and uplift the
-							local community amidst the pandemic. The team started this project when we realised that
-							there was no centralised database for these vendors, making it hard for people to discover
-							them.
-						</p>
-					</article>
-				</div>
-				<div id="contact" class="scroll-below-header">
-					<h1 class="blue underline">Links</h1>
-					<ul id="contact-links">
-						<li><a id="cv" href="https://bhsz.me/BrandonHo_CV.pdf">My CV</a></li>
-						<li><a href="https://www.facebook.com/ibhsz.2000">Facebook</a></li>
-						<li><a href="https://www.instagram.com/don.hsz">Instagram</a></li>
-						<li><a href="https://www.linkedin.com/in/bhsz/">Linkedin</a></li>
-						<li><a href="https://www.github.com/bhsz">GitHub</a></li>
-						<li><a href="mailto:szh19@ic.ac.uk">Email</a></li>
-					</ul>
-				</div>
-			</main>
+		<div class="bg"></div>
+
+		<div class="info">
+			<div class="image"></div>
+
+			<span class="content">
+				<h3>Brandon Ho Soon Zhi</h3>
+				<br />
+				<p class="intro">Second year, MEng Computing @ Imperial College London.</p>
+				<br />
+				<p><a href="./BrandonHo_CV.pdf">My CV</a></p>
+
+				<span class="logos">
+					<a href="https://www.facebook.com/ibhsz.2000"><span class="icons fab fa-facebook"></span></a>
+					<a href="https://www.instagram.com/don.hsz"><span class="icons fab fa-instagram"></span></a>
+					<a href="https://www.linkedin.com/in/bhsz/"><span class="icons fab fa-linkedin"></span></a>
+					<a href="https://www.github.com/bhsz"><span class="icons fab fa-github"></span></a>
+					<a href="mailto:szh19@ic.ac.uk"><span class="icons far fa-envelope"></span></a>
+				</span>
+			</span>
 		</div>
+
+		<div class="square-spawn">
+			<section></section>
+		</div>
+		<script>
+			const colors = [
+				"#2196f3",
+				"#e91e63",
+				"#ffeb3b",
+				"#74ff1d"
+			];
+
+			const section = document.querySelector("section");
+
+			function createSquare() {
+				const square = document.createElement("span");
+
+				square.classList += "square";
+
+				var size = Math.random() * 50;
+
+				square.style.width = 20 + size + "px";
+				square.style.height = 20 + size + "px";
+
+				square.style.top = Math.random() * innerHeight + "px";
+				square.style.left = Math.random() * innerWidth + "px";
+
+				const bg = colors[Math.floor(Math.random() * colors.length)];
+				square.style.background = bg;
+
+				section.appendChild(square);
+
+				setTimeout(() => {
+					square.remove()
+				}, 5000);
+			}
+
+			setInterval(createSquare, 150);
+		</script>
 	</body>
 </html>
