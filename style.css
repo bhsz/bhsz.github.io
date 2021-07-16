@@ -10,7 +10,7 @@ body {
 .bg {
 	position: absolute;
 	width: 100%;
-	height: 435px;
+	height: 55vh;
 	background: cornflowerblue;
 }
 
@@ -19,7 +19,7 @@ body {
 .info {
 	z-index: 1;
 	position: relative;
-	top: 135px;
+	top: calc(55vh - 300px);
 	left: calc(50vw - 150px);
 	height: 500px;
 	width: 300px;
@@ -37,11 +37,16 @@ body {
 }
 
 .info .content {
+	width: 240px;
 	z-index: 1;
 	display: inline-block;
 	padding: 0 10%;
 	text-align: center;
 	color: #444;
+}
+
+.info .content h3 {
+	margin: 10px 0;
 }
 
 .intro {
