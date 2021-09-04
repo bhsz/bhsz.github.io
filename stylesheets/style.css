@@ -21,7 +21,7 @@ body {
 	position: relative;
 	top: calc(55vh - 300px);
 	left: calc(50vw - 150px);
-	height: 500px;
+	height: 530px;
 	width: 300px;
 	border-radius: 25px;
 	box-shadow: 0px 4px 4px 0 slategrey;
@@ -32,15 +32,16 @@ body {
 .image {
 	height: 300px;
 	width: 300px;
-	background-image: url("./favicon.png");
+	background-image: url("../images/favicon.png");
 	background-size: 300px 300px;
 }
 
 .info .content {
-	width: 240px;
+	width: 270px;
+	height: 200px;
 	z-index: 1;
 	display: inline-block;
-	padding: 0 10%;
+	padding: 0 5%;
 	text-align: center;
 	color: #444;
 }
@@ -51,7 +52,7 @@ body {
 
 .intro {
 	font-size: 12px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 p {
