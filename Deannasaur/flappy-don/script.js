@@ -62,17 +62,17 @@ const runGame = () => {
 	}, 1000);
 
 	main = setInterval(() => {
-		const donTop = don.getBoundingClientRect().top;
-		const donBot = don.getBoundingClientRect().bottom;
-		const donRight = don.getBoundingClientRect().right;
-		const holeBot = hole.getBoundingClientRect().bottom;
-		const holeTop = hole.getBoundingClientRect().top;
-		const holeLeft = hole.getBoundingClientRect().left;
-		const gameBot = game.getBoundingClientRect().bottom;
+		const donTop = don.offsetTop;
+		const donBot = donTop + don.offsetHeight;
+		const donRight = don.offsetLeft + don.offsetWidth;
+		const holeTop = hole.offsetTop;
+		const holeBot = holeTop + hole.offsetHeight;
+		const holeLeft = hole.offsetLeft;
+		const gameBot = game.offsetTop + game.offsetHeight;
 
 		// Gravity
 		if (!jumping) {
-			const newTop = donTop + 2;
+			const newTop = don.offsetTop + 2;
 			don.style.top = `${newTop}px`;
 		}
 
@@ -102,8 +102,8 @@ const jump = () => {
 			jumping = false;
 			clearInterval(jumpInterval);
 		}
-		const newTop = don.getBoundingClientRect().top - 2;
-		don.style.top = `${newTop < 8 ? 8 : newTop}px`;
+		const newTop = don.offsetTop - 2;
+		don.style.top = `${newTop < 60 ? 60 : newTop}px`;
 	}, 10);
 };
 
