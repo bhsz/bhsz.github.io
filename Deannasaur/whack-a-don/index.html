@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			href="/Deannasaur/assets/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+		<link rel="stylesheet" href="/Deannasaur/whack-a-don/style.css" />
+		<title>Whack a Don!</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Whack a Don!</h1>
+			<p>
+				Sometimes Don is very kacau and deserves to be whacked, here's your
+				chance to let go of that anger!
+			</p>
+			<p>Your target is to whack him at least 21 times!</p>
+			<button id="start" disabled="true">START</button>
+			<h2><span id="time">30</span> seconds left!</h2>
+			<h2>Your score: <span id="score">0</span></h2>
+			<div id="q-and-a">
+				<label for="question">
+					How many days (including today) has it been since 21/4/15?
+				</label>
+				<br />
+				<input type="text" id="question" />
+				<button id="submit">Answer</button>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="square" id="1"></div>
+			<div class="square" id="2"></div>
+			<div class="square" id="3"></div>
+			<div class="square" id="4"></div>
+			<div class="square" id="5"></div>
+			<div class="square" id="6"></div>
+			<div class="square" id="7"></div>
+			<div class="square" id="8"></div>
+			<div class="square" id="9"></div>
+			<div class="square" id="10"></div>
+			<div class="square" id="11"></div>
+			<div class="square" id="12"></div>
+			<div class="square" id="13"></div>
+			<div class="square" id="14"></div>
+			<div class="square" id="15"></div>
+			<div class="square" id="16"></div>
+		</div>
+	</body>
+	<script src="/Deannasaur/sound.js"></script>
+	<script src="/Deannasaur/whack-a-don/script.js"></script>
+</html>
