@@ -4,6 +4,6 @@ module.exports = {
   entry: './src/eatWhat.js',
   output: {
     filename: 'eatWhat.js',
-    path: path.resolve(__dirname, 'javascripts'),
+    path: path.resolve(__dirname, 'dist', 'javascripts'),
   },
 };
