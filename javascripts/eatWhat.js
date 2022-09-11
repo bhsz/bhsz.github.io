@@ -1,5 +1,7 @@
 import restaurants from "./restaurants.json" assert {type: 'json'};
 
+alert(JSON.stringify(restaurants));
+
 const button = document.getElementById("next");
 const logo = document.getElementById("logo");
 const suggestion = document.getElementById("suggestion");
