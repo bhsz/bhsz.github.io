@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="images/favicon.png" type="image/png" />
+		<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="stylesheets/skeleton/normalize.min.css" />
+		<link rel="stylesheet" href="stylesheets/skeleton/skeleton.min.css" />
+		<style>
+			#header {
+				text-align: center;
+				margin-top: 5vh;
+			}
+			span {
+				font-weight: 700;
+			}
+			.blue {
+				color: #4285f4;
+			}
+			.red {
+				color: #ea4335;
+			}
+			.yellow {
+				color: #fbbc05;
+			}
+			.green {
+				color: #34a853;
+			}
+			#search-form {
+				margin: 5vh auto;
+				width: 90vw;
+				max-width: 600px;
+				font-size: large;
+			}
+			.search {
+				text-align: center;
+			}
+			.button-primary {
+				font-size: medium !important;
+				margin-top: 10px !important;
+			}
+		</style>
+		<title>Let me Google that for you</title>
+	</head>
+	<body>
+		<h1 id="header">
+			Let me <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span
+			><span class="blue">g</span><span class="green">l</span><span class="red">e</span> that for you
+		</h1>
+		<form id="search-form">
+			<input class="u-full-width" type="text" placeholder="Meatless Monday" />
+			<div class="search">
+				<input class="button-primary" type="submit" value="&#x1F50D; Search" />
+			</div>
+		</form>
+	</body>
+	<script>
+		let searchForm = document.getElementById("search-form");
+		searchForm.addEventListener("submit", (e) => {
+			e.preventDefault();
+			let query = e.target.firstElementChild.value;
+			if (query) {
+				window.location.replace(`https://www.google.com/search?q=${query}`);
+			}
+		});
+	</script>
+</html>

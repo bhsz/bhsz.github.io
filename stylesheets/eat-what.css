@@ -1,0 +1,79 @@
+body {
+    background-color: #D62828;
+    font-family: "Montserrat";
+    text-align: center;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#title {
+    margin: 10vh 0 0 0;
+}
+
+#logo img {
+    width: 200px;
+    height: 200px;
+}
+
+#suggestion {
+   display: none;
+   background-color: #9DF7E5;
+   width: 300px;
+   padding: 16px 8px;
+}
+
+#next {
+    background-color: gray;
+    border-radius: 30px;
+    border: none;
+    width: 130px;
+    cursor: pointer;
+}
+
+#restaurant-name {
+    margin: 0.2em 0;
+}
+
+#restaurant-metadata {
+    width: 80%;
+    padding: 1px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#attribution {
+    font-size: 10px;
+    color: aliceblue;
+}
+
+/* Utility classes */
+
+.semi-bold-white {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.semi-bold-black {
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.normal-white {
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.small-cream {
+    color: #F3E1DD;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.main-content {
+    margin: 6vh auto;
+}
