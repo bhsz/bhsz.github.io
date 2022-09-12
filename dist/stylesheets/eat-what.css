@@ -20,7 +20,8 @@ body {
 #suggestion {
    display: none;
    background-color: #9DF7E5;
-   width: 310px;
+   width: 93vw;
+   max-width: 325px;
    padding: 16px 8px;
 }
 
