@@ -23,6 +23,7 @@ body {
    width: 93vw;
    max-width: 325px;
    padding: 16px 8px;
+   box-sizing: border-box;
 }
 
 #next {
