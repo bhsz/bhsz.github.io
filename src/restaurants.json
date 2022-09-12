@@ -53,7 +53,7 @@
         "address": "Waterfront",
         "category": "Dinner",
         "food_type": "Italian",
-        "tags": "Go-to place for Dee and fam"
+        "tags": "Authentic Italian food at waterfront with sunset view, but long waiting time (Papa Sim's favourite)"
     },
     {
         "name": "Yen Ai",
@@ -108,7 +108,7 @@
         "name": "Brown Fox",
         "address": "Sutera Avenue",
         "category": "Cafe",
-        "food_type": "Coffee, Cake, Ligh eats",
+        "food_type": "Coffee, Cake, Light eats",
         "tags": "Fastest cafe WiFi in KK so far"
     },
     {
@@ -173,5 +173,96 @@
         "category": "Breakfast",
         "food_type": "Bread",
         "tags": "Dee's favourite"
+    },
+    {
+        "name": "Cafe Haru",
+        "address": "Hiltop / Taman Cantek",
+        "category": "Brunch, High Tea",
+        "food_type": "Korean food, Ccoffee",
+        "tags": "Good ambience to study, yummy vegetarian topoki"
+    },
+    {
+        "name": "Hyphen",
+        "address": "Damai",
+        "category": "Brunch, Cafe",
+        "food_type": "Coffee, Cake",
+        "tags": "Good co working space (Angel’s favourite)"
+    },
+    {
+        "name": "Kun’s Hotpot",
+        "address": "Lintas",
+        "category": "Dinner",
+        "food_type": "Chinese hotpot",
+        "tags": "Authentic 麻辣 hotpot with griller"
+    },
+    {
+        "name": "Bintulu",
+        "address": "Lintas",
+        "category": "Dinner",
+        "food_type": "Korean",
+        "tags": "Good Korean food served by Korean couple"
+    },
+    {
+        "name": "Yee Fung laksa",
+        "address": "Gaya Street",
+        "category": "Breakfast",
+        "food_type": "Local food",
+        "tags": "Popular and delicious, feel the KK vibes (Mama Sim approves)"
+    },
+    {
+        "name": "Sakagura",
+        "address": "Oceanus",
+        "category": "Dinner",
+        "food_type": "Japanese",
+        "tags": "Premium Japanese dining"
+    },
+    {
+        "name": "Sushi Tei",
+        "address": "Suria",
+        "category": "Lunch, Dinner",
+        "food_type": "Japanese",
+        "tags": "Good quality, reasonably priced (I think their supplies come Thursday evening, so that's when it's the freshest)"
+    },
+    {
+        "name": "Coastal Coffee Club",
+        "address": "Damai",
+        "category": "High Tea",
+        "food_type": "Coffee, Cakes",
+        "tags": "Good cakes and matcha"
+    },
+    {
+        "name": "B Side",
+        "address": "Lido Plaza",
+        "category": "Brunch, Dineer",
+        "food_type": "Fusion, Coffee, Cakes",
+        "tags": "One of the OG cafes, good food and coffee"
+    },
+    {
+        "name": "兴旺板面",
+        "address": "Damai",
+        "category": "Lunch",
+        "food_type": "Noodles",
+        "tags": "Konlao pan mee is good, the location is also accessible to a lot of other kopitiams for round two"
+    },
+    {
+        "name": "和源记烧腊",
+        "address": "2020",
+        "category": "Lunch",
+        "food_type": "Chinese BBQ meat",
+        "tags": "The forbidden nasi lemak 👀"
+    },
+    {
+        "name": "富平",
+        "address": "Hiltop",
+        "category": "Breakfast, Lunch",
+        "food_type": "Dimsum",
+        "tags": "OG dimsum place"
+    },
+    {
+        "name": "乐天",
+        "address": "Taman Dixon",
+        "category": "Breakfast, Lunch",
+        "food_type": "Dimsum",
+        "tags": "Nice spot around the neighbourhood"
     }
 ]
